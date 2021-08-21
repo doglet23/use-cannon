@@ -193,7 +193,8 @@ self.onmessage = (e) => {
       state.bodies[uuid].position.set(props[0], props[1], props[2])
       break
     case 'setQuaternion':
-      state.bodies[uuid].quaternion.setFromEuler(props[0], props[1], props[2])
+      console.log(props)
+      state.bodies[uuid].quaternion.setFromEuler(props[0], props[1], props[2], 'YZX')
       break
     case 'setVelocity':
       state.bodies[uuid].velocity.set(props[0], props[1], props[2])
